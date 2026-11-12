@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yvanna’s 7th Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mansalva&family=Poppins:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="bgv" autoplay muted loop playsinline preload="auto" poster="assets/bg-poster.jpg" aria-hidden="true">
+ <source src="assets/bg-loop.mp4" type="video/mp4">
+</video>
+<div class="veil"></div>
+<audio id="bgm" src="assets/bg-music.mp3" loop preload="auto"></audio>
+
+<button id="music" class="muted" aria-label="Play music" aria-pressed="false" title="Music">
+ <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+ <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
+</button>
+
+<div class="wrap">
+
+<!-- ENVELOPE (first page) -->
+<section class="page" id="envelope">
+ <h1 class="script eTitle">You have a special invitation!</h1>
+ <div class="stage" id="stage">
+  <div class="back"></div>
+  <div class="card">
+   <p class="l">You are invited to the</p>
+   <p class="script big">7th birthday celebration</p>
+   <p class="l">of</p>
+   <p class="script nm">Yvanna</p>
+   <p class="dt">December 6, 2026</p>
+  </div>
+  <div class="front"></div>
+  <div class="flap"></div>
+  <div class="seal">Y</div>
+ </div>
+ <button class="btn main" id="openBtn">💌 Open</button>
+ <button class="btn main" id="goBtn">See the full invitation →</button>
+</section>
+
+<!-- HOME -->
+<section class="page" id="home">
+ <div class="hero">
+  <div>
+   <p class="lead">You are invited to the</p>
+   <h1 class="script">7th birthday celebration</h1>
+   <div class="nameRow"><span class="of">of</span><span class="script stroke">Yvanna</span></div>
+   <p class="meta">on <b>December 6, 2026</b> at <span id="time">—</span></p>
+  </div>
+  <div class="photos">
+   <img class="deco" src="assets/xoxo.png" alt="" style="right:6px;top:-8px;width:64px;z-index:3">
+   <div class="polaroid a"><div class="slot" id="photo1">Photo 1</div></div>
+   <div class="polaroid b"><div class="slot" id="photo2">Photo 2</div></div>
+   <img class="deco" src="assets/glitter-1.png" alt="" style="right:-6px;top:50%;width:120px;z-index:3">
+   <img class="deco floaty guitar" src="assets/guitar.png" alt="" style="left:2%;top:34%;width:115px;z-index:4">
+  </div>
+ </div>
+
+ <div class="grid2">
+  <div class="card2">
+   <h2 class="script">Counting down</h2>
+   <div class="count" id="count">
+    <div class="tile"><b id="d">0</b><small>Days</small></div>
+    <div class="tile"><b id="h">0</b><small>Hours</small></div>
+    <div class="tile"><b id="m">0</b><small>Mins</small></div>
+    <div class="tile"><b id="s">0</b><small>Secs</small></div>
+   </div>
+   <p id="done" style="display:none;margin:0" class="script">It’s party day! 🎉</p>
+  </div>
+  <div class="card2">
+   <h2 class="script">Where’s the party?</h2>
+   <div class="venue" id="venue">Venue name &amp; address — to be announced</div>
+   <a class="btn main" id="mapBtn" href="#" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+  </div>
+ </div>
+
+ <div class="explore">
+  <h2 class="script">The 7 Special Moments</h2>
+  <div class="tiles" id="tiles"></div>
+ </div>
+
+ <div class="theme contact" id="contact">
+  <div class="badge"><span>💌</span></div>
+  <h1 class="script">Contact the Parents</h1>
+  <p class="in">Please let us know if you can make it to Yvanna’s big day!</p>
+  <div class="row"><small>Facebook</small><a class="btn main" href="https://www.facebook.com/ladyjuf.colisao.1" target="_blank" rel="noopener" style="margin-top:8px">Message on Facebook</a></div>
+  <div class="row"><small>Phone number</small><span id="phone">—</span></div>
+  <div class="row"><small>Email</small><span id="email">—</span></div>
+ </div>
+</section>
+
+<div id="themes"></div>
+
+<footer><img src="assets/hills.png" alt="">Made with love for Yvanna’s 7th birthday 💗</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
